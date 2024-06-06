@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+:root {
+--colTrasero: #2b83db;
+--colFrontal: rgba(33,49,65,0.9);
+--colBorde:#0d4d8d;
+
+}
+
+/* general*/
+
+html body{
+    font-family: "Dosis" , "sans serif";
+    background-color: #eee;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+#lista-de-la-compra {
+    width: 400px;
+    height: 600px;
+    background-color: var(--colTrasero);
+    background-image: url(./fondo.png);
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 5px;
+    border: 3px solid var(--colBorde);
+    overflow: hidden;
+    user-select: none;
+}
+
+/* categorias */
+
+#lista-de-la-compra nav {
+    position: relative;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#lista-de-la-compra nav > div {
+    width: 100%;
+    height: 30px;
+    background-color: var(--colTrasero);
+    padding: 5px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+#lista-de-la-compra nav > div:hover {
+    width: auto;
+    height: auto;
+    border-bottom: 2px solid var(--colBorde);
+    cursor: pointer;
+}
+
+#lista-de-la-compra nav > div > div:hover {
+    width: auto;
+    height: auto;
+    border-bottom: 2px solid var(--colBorde);
+    cursor: pointer;
+}
+
+/* productos*/
+
+#lista-de-la-compra main {
+    height: 540px;
+    background-color: var(--colFrontal);
+    padding: 10px;
+    border: 2px solid var(--colBorde);
+    border-radius: 5px;
+    text-transform: capitalize;
+    overflow: auto;
+}
+
+#lista-de-la-compra main div {
+    text-align: center;
+    padding: 3px;
+    border-bottom: 2px dotted var(--colBorde);
+}
+
+#lista-de-la-compra main div:hover {
+    background-color: var(--colTrasero);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* info */
+
+#lista-de-la-compra > div {
+    text-align: center;
+}
+
+#lista-de-la-compra > div::first-letter{
+    text-transform: uppercase;
+}
+
+/* scroll*/
+
+#lista-de-la-compra main {
+    scrollbar-color: var(--colFrontal) var(--colBorde);
+    scrollbar-width: thin;
+}
